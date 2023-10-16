@@ -7,7 +7,7 @@ import { selectError, selectIsLoading } from "redux/contactsSlice";
 export const ContactList = () => {
     const dispatch = useDispatch();
     const visibleContacts = useSelector(selectVisibleContacts);
-    const error = useSelector(selectError);
+    const isError = useSelector(selectError);
     const isLoading = useSelector(selectIsLoading);
 
     return (
@@ -17,7 +17,7 @@ export const ContactList = () => {
                     <ContactInfo><ContactName>{name}:</ContactName>{phone}</ContactInfo>
                     <Button type="button" onClick={() => dispatch(deleteContact(id))} >Delete</Button>
                 </ContactItem>)}
-            { visibleContacts.length <= 0 && !error && !isLoading && <Text>You don't have contacts</Text>}
+            { visibleContacts.length <= 0 && !isError && !isLoading && <Text>You don't have contacts</Text>}
       </ul>
     )
 }

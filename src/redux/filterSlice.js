@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { selectContacts, selectError } from "./contactsSlice";
+import { selectContacts} from "./contactsSlice";
 
 export const filterInitialState = {
     value: '',

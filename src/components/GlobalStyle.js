@@ -32,5 +32,6 @@ p {
 h1, h2 {
   margin: 0;
   color: ${p => p.theme.colors.textTitle};
+  font-weight: 700;
 }
 `
